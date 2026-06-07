@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Samorix Ironhart</title>
+</head>
+
+<body>
+    <div class="particulas"></div>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="inicio" class="cabecalho">
+        <div>
+            <img src="./img/knight.PNG" class="foto-perfil">
+            <h1> Samorix Ironhart/Samuel de Jesus</h1>
+            <p class="cabecalho-sub-titulo"> Desenvolvedor de Games GML</p>
+        </div>
+    </main>
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo"> Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá,sou um Desenvolvedor de jogos que utiliza a ferramenta/engine Gamemaker Studio 2! Aprendi a criar
+                jogos utilizando com base o curso da NoNeclass.Atualmente (dia:7 de 2026) estou fazendo um jogo mobile
+                chamado Zig Zag bird endless runner.Pretendo melhorar meu aprendizado da minha progamação e aprender a
+                utilizar outras ferramentas!
+            </p>
+        </div>
+    </section>
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus projetos </h2>
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+              
+                <img src="./img/angebang.png" alt="Projeto 1" class="projeto-imagem">
+                  <div class="caixa-texto-projetos">
+                <h3 class="info-projetos">Ang e Bang </h3>
+                <p class="paragrafo-projetos"> Meu primeiro jogo para uma Game Jam (que foi para NoNe Jam) faltou alguns
+                    polimentos como a melhoria de colisão e melhoria nas artes </p>
+                    </div>
+            </div>
+
+            <div class="projetos-card">
+                
+                <img src="./img/capivara.png" alt="Projeto 2" class="projeto-imagem">
+                  <div class="caixa-texto-projetos">
+                <h3 class="info-projetos">Capybaras and skateboardings </h3>
+                <p class="paragrafo-projetos">Meu segundo jogo para uma Game Jam com um tema retro (lembrando que não era
+                    uma NoNe jam)feito em 5 dias com inspiração do jogo do dinossauro do google e estilo de arte gameboy</p>
+            </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/pepino.png" alt="Projeto 3" class="projeto-imagem">
+                 <div class="caixa-texto-projetos">
+                <h3 class="info-projetos">Pepino radical </h3>
+                <p class="paragrafo-projetos">Esse foi meu primeiro jogo da vida de Gamemaker Studio 2,criado para ser um
+                    bullet hell infinito! </p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input type="text" name="nome" placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea name="mensagem" class="campo-form" placeholder="Digite sua Mensagem" rows="5" id="mensagem"></textarea>
+            </div>
+         <button type="submit" class="botao-form">Enviar Whatsapp</button>
+        </form>
+    </section>
+ <script>
+    function enviarWhats(event) {
+    event.preventDefault();
+    
+   const nome = document.getElementById('nome').value;
+   const mensagem = document.getElementById('mensagem').value;
+   const telefone = '5531992264973';
+   const texto = `Olá, meu nome é ${nome}, mensagem:${mensagem}`;
+   const msgFormatada = encodeURIComponent(texto);
+   const url = `https://wa.me/${telefone}/?text=${msgFormatada}`;
+   console.log(url);
+   window.open(url, '_blank');
+    }
+ </script>
+</body>
+
+</html>
